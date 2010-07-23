@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Anthony Heukmes"]
-  s.date = %q{2010-07-22}
+  s.date = %q{2010-07-23}
   s.default_executable = %q{choco}
   s.description = %q{Choco brings the MVC to the client side! It allows you to easily develop maintainable Rich Internet Applications using Javascript.}
   s.email = %q{anthony.heukmes@skynet.be}
