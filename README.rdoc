@@ -20,6 +20,8 @@ Choco is based on powerful libaries :
 
 Huge thanks to Aaron Quint and Ben Pickles for their incredible work.
 
+A sample project based on Rails 3 is available here : http://github.com/ahe/choco_demo
+
 == Installation
 
 Choco is a Ruby gem, simply install it :
