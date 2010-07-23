@@ -22,6 +22,9 @@ Huge thanks to Aaron Quint and Ben Pickles for their incredible work.
 
 A sample project based on Rails 3 is available here : http://github.com/ahe/choco_demo
 
+An awesome screencast with an awesome belgian accent is available here : 
+http://www.2dconcept.com/images/choco.mov
+
 == Installation
 
 Choco is a Ruby gem, simply install it :

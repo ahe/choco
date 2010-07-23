@@ -31,10 +31,6 @@ module Choco
       empty_directory "#{name}/lib"
     end
     
-    def create_compressed_folder
-      empty_directory "#{name}/compressed"
-    end
-    
     def create_images_folder
       empty_directory "#{name}/images"
     end
