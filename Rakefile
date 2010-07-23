@@ -1,17 +1,27 @@
 require 'rubygems'
 require 'rake'
 
+$LOAD_PATH.unshift(File.join(File.dirname(__FILE__), 'lib'))
+
+require 'choco'
+
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "choco"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.version = Choco::VERSION
+    gem.summary = %Q{A delicious Javascript web framework made in Belgium!}
+    gem.description = %Q{Choco brings the MVC to the client side! It allows you to easily develop maintainable Rich Internet Applications using Javascript.}
     gem.email = "anthony.heukmes@skynet.be"
     gem.homepage = "http://github.com/ahe/choco"
     gem.authors = ["Anthony Heukmes"]
+    
+    gem.add_dependency "jim"
+    gem.add_dependency "fssm"
+    gem.add_dependency "thor"
+    gem.add_dependency "activesupport"    
+    
     gem.add_development_dependency "rspec", ">= 1.2.9"
-    # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
   Jeweler::GemcutterTasks.new
 rescue LoadError

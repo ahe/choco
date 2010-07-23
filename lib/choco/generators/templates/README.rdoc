@@ -1,0 +1,3 @@
+== Welcome to Choco
+
+A delicious Javascript web framework made in Belgium!

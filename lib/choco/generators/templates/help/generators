@@ -1,0 +1,33 @@
+
+The following Choco generators are available :
+
+controller
+  $ choco generate controller <controller_name>
+  
+  It will create the controller file and a views folder.
+  
+model
+  $ choco generate model <model_name>
+
+  It will create the model file.
+
+scaffold
+  $ choco generate scaffold <resource_name> [field1 field2 ...]
+
+  It will create a RESTful controller, the model and the views.
+
+scaffold <url>
+  $ choco generate scaffold <resource_name> <url>
+
+  It will create a RESTful controller, the model and the views.
+  The fields will be determined from the JSON returned by your URL
+  e.g : http://localhost:3000/posts.json
+  
+layout
+  $ choco generate layout <layout_name>
+
+  It will create the layout file.
+  
+plugin
+  $ choco generate plugin <plugin_name>
+

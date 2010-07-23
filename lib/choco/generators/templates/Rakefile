@@ -1,0 +1,25 @@
+require 'rake'
+
+namespace :choco do
+
+  namespace :js do
+	
+  	desc "Install Javascript dependencies"
+  	task :install do
+  	  system 'jim install http://code.jquery.com/jquery-1.4.2.js'
+  	  system 'jim install http://github.com/quirkey/sammy/zipball/v0.5.4'
+  	  system 'jim install http://github.com/benpickles/js-model/zipball/v0.8.4'
+  	  system 'jim install http://documentcloud.github.com/underscore/underscore.js'
+  	  system 'jim install http://github.com/janl/mustache.js/zipball/0.2.3'
+  	  system 'jim install http://github.com/ahe/choco.libs/raw/master/choco.utils.js'  	  
+  	  system 'jim install http://github.com/ahe/choco.libs/raw/master/plugins/models/choco.plugins.models.load.js'
+  	  system 'jim install http://github.com/ahe/choco.libs/raw/master/plugins/sammy/choco.plugins.sammy.smart_renderer.js'
+      system 'jim bundle lib/bundled.js'
+  	end
+  end
+  
+  desc "Compress all your JS files into lib/compressed.js"
+  task :deploy do
+    system 'jim compress lib/compressed.js'
+  end
+end

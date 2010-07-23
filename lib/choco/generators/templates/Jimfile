@@ -1,0 +1,24 @@
+// Your Jimfile lists your JS dependencies
+// Launch $ choco --watch at the root of your project
+// This file and lib/bundled.js will be maintained for you!
+
+jquery
+sammy
+sammy.template
+sammy.nested_params
+sammy.smart_renderer
+js-model 0.8.3
+underscore
+mustache
+choco.utils
+choco.plugins.models.load
+
+// Libs # Don't remove this line!
+
+// Helpers # Don't remove this line!
+app/helpers/application_helper
+
+// Models # Don't remove this line!
+
+// Controllers # Don't remove this line!
+app/controllers/application_controller

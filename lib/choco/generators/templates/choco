@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+require 'rubygems'
+require 'choco'
+
+cli = Choco::CLI.new(ARGV)
+puts cli.run

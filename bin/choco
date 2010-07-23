@@ -1,0 +1,45 @@
+#!/usr/bin/env ruby
+
+require 'choco'
+require 'pathname'
+
+module Choco
+  module ScriptChocoLoader
+    SCRIPT_CHOCO = File.join('script', 'choco')
+
+    def self.exec_script_choco!
+      cwd = Dir.pwd
+      exec 'ruby', SCRIPT_CHOCO, *ARGV if in_choco_application?
+      
+      Dir.chdir("..") do
+        # Recurse in a chdir block: if the search fails we want to be sure
+        # the application is generated in the original working directory.
+        exec_script_choco! unless cwd == Dir.pwd
+      end
+    rescue SystemCallError
+      # could not chdir, no problem just return
+    end
+    
+    def self.in_choco_application?
+      File.exists?(SCRIPT_CHOCO) || in_choco_application_subdirectory?
+    end
+    
+    def self.in_choco_application_subdirectory?(path = Pathname.new(Dir.pwd))
+      File.exists?(File.join(path, SCRIPT_CHOCO)) || !path.root? && in_choco_application_subdirectory?(path.parent)
+    end
+  end
+end
+
+Choco::ScriptChocoLoader.exec_script_choco!
+
+ARGV << '--help' if ARGV.empty?
+command = ARGV.shift
+
+case command
+  when 'new'
+    Choco::AppGenerator.start ARGV
+  when '-v'
+    puts "Choco version #{Choco::VERSION}" 
+  else
+    puts "\nWelcome to Choco!\nA delicious Javascript web framework made in Belgium!\n\nUsage:\n\n$ choco new <project_name>\n-> Generates a new Choco project\n\n$ choco -v\n-> Displays current version\n"
+end

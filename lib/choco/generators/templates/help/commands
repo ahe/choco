@@ -1,0 +1,12 @@
+
+The choco script responds to the following commands and options :
+
+--watch
+  The Choco watch command will track JS files in your project (create, update, remove).
+  It will regenerate your bundled.js at every modification in one of your JS files.
+  Your Jimfile will also be maintained by this command.
+  
+generate <generator_name> <resource_name> [options]
+  Available generators are : controller, model, scaffold, layout, plugin
+  Run '$ choco generate', for more information.
+

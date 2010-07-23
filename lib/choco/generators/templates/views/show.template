@@ -1,0 +1,10 @@
+<% @keys.each do |key| %>
+  <p>
+    <label><%= key.camelcase %></label>
+    <br/>
+    <%%= <%= @model %>.attr('<%= key %>') %>
+  </p>
+<% end %>
+<br/>
+<br/>
+<a href="#/<%= @route_path %>">Back to index</a>

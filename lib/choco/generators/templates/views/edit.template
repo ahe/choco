@@ -1,0 +1,14 @@
+<h1>Edit a <%= @model %></h1>
+<form action="#/<%= @route_path %>/update/<%%= <%= @model %>.id() %>" method="put">
+  <% @keys.each do |key| %>
+    <% if key != 'id' %>
+      <p>
+        <label><%= key.camelcase %></label><br/>
+        <input type="text" name="<%= @model %>[<%= key %>]" value="<%%= <%= @model %>.attr('<%= key %>') %>"/>
+      </p>
+    <% end %>
+  <% end %>
+  <p>
+    <input type="submit" value="Update" />
+  </p>
+</form>
