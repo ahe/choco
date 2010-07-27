@@ -3,7 +3,7 @@ require 'thor/group'
 require 'active_support/inflector'
 
 module Choco
-  VERSION = '0.1.0'
+  VERSION = '0.1.1'
   
   autoload :DependencyManager, 'choco/dependency_manager'
   autoload :CLI, 'choco/cli'  

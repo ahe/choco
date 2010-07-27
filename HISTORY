@@ -1,3 +1,11 @@
-== 0.1.0 [07-22-10]
+== 0.1.1 [07-27-10]
+
+* Clean generated HTML (indentation)
+* Add lib/application.js file at project generation
+* Remove compressed folder
+* When a controller is deleted, the watcher script removes it from the app controller
+* Add specifications
+
+== 0.1.0 [07-23-10]
 
 * Initial release

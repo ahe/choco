@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Anthony Heukmes"]
-  s.date = %q{2010-07-23}
+  s.date = %q{2010-07-27}
   s.default_executable = %q{choco}
   s.description = %q{Choco brings the MVC to the client side! It allows you to easily develop maintainable Rich Internet Applications using Javascript.}
   s.email = %q{anthony.heukmes@skynet.be}
@@ -48,6 +48,7 @@ Gem::Specification.new do |s|
      "lib/choco/generators/templates/help/generators",
      "lib/choco/generators/templates/helpers/application_helper.js",
      "lib/choco/generators/templates/index.html",
+     "lib/choco/generators/templates/lib/application.js",
      "lib/choco/generators/templates/lib/plugin.js",
      "lib/choco/generators/templates/models/base.js",
      "lib/choco/generators/templates/views/edit.template",
@@ -57,6 +58,8 @@ Gem::Specification.new do |s|
      "lib/choco/generators/templates/views/new.template",
      "lib/choco/generators/templates/views/show.template",
      "spec/choco_spec.rb",
+     "spec/dependency_manager_spec.rb",
+     "spec/generators_spec.rb",
      "spec/spec.opts",
      "spec/spec_helper.rb"
   ]
@@ -67,6 +70,8 @@ Gem::Specification.new do |s|
   s.summary = %q{A delicious Javascript web framework made in Belgium!}
   s.test_files = [
     "spec/choco_spec.rb",
+     "spec/dependency_manager_spec.rb",
+     "spec/generators_spec.rb",
      "spec/spec_helper.rb"
   ]
 
