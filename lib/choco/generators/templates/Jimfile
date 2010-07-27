@@ -14,6 +14,7 @@ choco.utils
 choco.plugins.models.load
 
 // Libs # Don't remove this line!
+lib/application
 
 // Helpers # Don't remove this line!
 app/helpers/application_helper
