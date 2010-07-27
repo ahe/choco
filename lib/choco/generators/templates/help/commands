@@ -7,6 +7,6 @@ The choco script responds to the following commands and options :
   Your Jimfile will also be maintained by this command.
   
 generate <generator_name> <resource_name> [options]
-  Available generators are : controller, model, scaffold, layout, plugin
+  Available generators are : controller, model, scaffold, fixture, layout, plugin
   Run '$ choco generate', for more information.
 

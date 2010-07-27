@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Anthony Heukmes"]
-  s.date = %q{2010-07-27}
+  s.date = %q{2010-07-28}
   s.default_executable = %q{choco}
   s.description = %q{Choco brings the MVC to the client side! It allows you to easily develop maintainable Rich Internet Applications using Javascript.}
   s.email = %q{anthony.heukmes@skynet.be}
@@ -32,6 +32,7 @@ Gem::Specification.new do |s|
      "lib/choco/dependency_manager.rb",
      "lib/choco/generators/app_generator.rb",
      "lib/choco/generators/controller_generator.rb",
+     "lib/choco/generators/fixture_generator.rb",
      "lib/choco/generators/layout_generator.rb",
      "lib/choco/generators/model_generator.rb",
      "lib/choco/generators/plugin_generator.rb",
@@ -44,6 +45,8 @@ Gem::Specification.new do |s|
      "lib/choco/generators/templates/controllers/application_controller.js",
      "lib/choco/generators/templates/controllers/base_controller.js",
      "lib/choco/generators/templates/controllers/rest_controller.js",
+     "lib/choco/generators/templates/fixtures/base.js",
+     "lib/choco/generators/templates/fixtures/model/array.js",
      "lib/choco/generators/templates/help/commands",
      "lib/choco/generators/templates/help/generators",
      "lib/choco/generators/templates/helpers/application_helper.js",

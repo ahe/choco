@@ -68,6 +68,16 @@ describe Choco::DependencyManager do
       
     end
     
+    describe "when it's a fixture" do
+      
+      it "should add an entry in the Jimfile (models section)" do
+        in_file('Jimfile', 'fixtures/posts').should == 0
+        Choco::DependencyManager.add_dependency('fixtures/posts.js')
+        in_file('Jimfile', 'fixtures/posts', "// Fixtures # Don't remove this line!").should == 1
+      end
+      
+    end
+    
     describe "when it's a lib" do
       
       it "should add an entry in the Jimfile (libs section)" do

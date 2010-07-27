@@ -10,6 +10,7 @@ sammy.smart_renderer
 js-model 0.8.3
 underscore
 mustache
+jquery.mockjax
 choco.utils
 choco.plugins.models.load
 
@@ -23,3 +24,5 @@ app/helpers/application_helper
 
 // Controllers # Don't remove this line!
 app/controllers/application_controller
+
+// Fixtures # Don't remove this line!

@@ -40,6 +40,10 @@ module Choco
       empty_directory "#{name}/stylesheets"
       template('templates/application.css', "#{name}/stylesheets/application.css")
     end
+
+    def create_fixtures_folder
+      empty_directory "#{name}/fixtures"
+    end
     
     def create_spec_folder
       empty_directory "#{name}/spec"

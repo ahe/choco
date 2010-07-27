@@ -14,6 +14,7 @@ namespace :choco do
   	  system 'jim install http://github.com/ahe/choco.libs/raw/master/choco.utils.js'  	  
   	  system 'jim install http://github.com/ahe/choco.libs/raw/master/plugins/models/choco.plugins.models.load.js'
   	  system 'jim install http://github.com/ahe/choco.libs/raw/master/plugins/sammy/choco.plugins.sammy.smart_renderer.js'
+  	  system 'jim install http://github.com/appendto/jquery-mockjax/raw/master/jquery.mockjax.js'
       system 'jim bundle lib/bundled.js'
   	end
   end

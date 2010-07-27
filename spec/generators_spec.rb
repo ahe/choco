@@ -42,6 +42,10 @@ describe "Generators" do
       File.exist?(@project_path + '/stylesheets/application.css').should be_true      
     end
     
+    it "should generate the fixtures folder" do
+      File.exist?(@project_path + '/fixtures').should be_true
+    end    
+    
     it "should generate the spec folder" do
       File.exist?(@project_path + '/spec').should be_true
     end
@@ -64,7 +68,7 @@ describe "Generators" do
       
         it "should set the views path to the project views folder" do
           file = get_file_as_string(@project_path + '/app/controllers/application_controller.js')
-          file.include?("this.use(Sammy.SmartRenderer, '/spec/tmp/test_project/app/views/');").should be_true
+          file.include?("this.project_path = '/spec/tmp/test_project';").should be_true
         end
       end
       
@@ -182,6 +186,30 @@ describe "Generators" do
           Choco::LayoutGenerator.start 'main'
           file = get_file_as_string('app/views/layouts/main.js')
           file.include?('var MainLayout').should be_true
+        end
+        
+      end
+      
+    end
+    
+    describe Choco::FixtureGenerator do
+      it "should generate a fixture file" do
+        Choco::FixtureGenerator.start 'posts'
+        File.exist?('fixtures/posts.js').should be_true
+      end
+      
+      it "should generate a fixture folder" do
+        Choco::FixtureGenerator.start 'posts'
+        File.exist?('fixtures/posts').should be_true
+        File.exist?('fixtures/posts/posts.json').should be_true
+      end
+      
+      describe "templates" do
+        
+        it "the URL should have a correct format" do
+          Choco::FixtureGenerator.start 'post'
+          file = get_file_as_string('fixtures/posts.js')
+          file.include?("url: '/posts',").should be_true
         end
         
       end

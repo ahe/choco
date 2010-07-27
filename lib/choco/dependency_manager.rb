@@ -16,6 +16,8 @@ module Choco
         type = 'Helper'
       elsif filename.include?('models/')
         type = 'Model'
+      elsif filename.include?('fixtures/')
+        type = 'Fixture'        
       else
         type = 'Libs'
       end

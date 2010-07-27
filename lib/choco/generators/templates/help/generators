@@ -23,6 +23,15 @@ scaffold <url>
   The fields will be determined from the JSON returned by your URL
   e.g : http://localhost:3000/posts.json
   
+fixture
+  $ choco generate fixture <resource_name>
+
+  It will create fixture & JSON files.
+  resource_name will be pluralized.
+  
+  $ choco generate fixture post
+  Will mock requests sent to /posts
+  
 layout
   $ choco generate layout <layout_name>
 
