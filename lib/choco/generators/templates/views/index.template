@@ -6,22 +6,22 @@
 
 <table>
   <thead>
-    <% @keys.each do |key| %>
-      <th><%= key.camelcase %></th>
-    <% end %>
+  <% @keys.each do |key| -%>
+    <th><%= key.camelcase %></th>
+  <% end -%>
     <th>Actions</th>
   </thead>
   <tbody>
     <%% $.each(<%= @model.pluralize %>, function(i, <%= @model %>) { %>
       <tr id="<%= @model %>_<%%= <%= @model %>.id() %>">
-        <% @keys.each do |key| %>
-          <td><%%= <%= @model %>.attr('<%= key %>') %></td>
-        <% end %>
-        <td>
-          <a href="#/<%= @route_path %>/<%%= <%= @model %>.id() %>">Permalink</a>
-          <a href="#/<%= @route_path %>/edit/<%%= <%= @model %>.id() %>">Edit</a>
-          <a href="#/<%= @route_path %>/<%%= <%= @model %>.id() %>" verb="delete" confirm="Are you sure?">Delete</a>          
-        </td>
+  <% @keys.each do |key| -%>
+    <td><%%= <%= @model %>.attr('<%= key %>') %></td>
+  <% end -%>
+    <td>
+        <a href="#/<%= @route_path %>/<%%= <%= @model %>.id() %>">Permalink</a>
+        <a href="#/<%= @route_path %>/edit/<%%= <%= @model %>.id() %>">Edit</a>
+        <a href="#/<%= @route_path %>/<%%= <%= @model %>.id() %>" verb="delete" confirm="Are you sure?">Delete</a>          
+      </td>
       </tr>
     <%% }); %>
   </tbody>

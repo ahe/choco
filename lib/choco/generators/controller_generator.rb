@@ -10,11 +10,11 @@ module Choco
     argument :name
     
     def create_controller_file
-      template('templates/controllers/base_controller.js', "app/controllers/#{name}_controller.js")
+      template('templates/controllers/base_controller.js', "app/controllers/#{name.underscore}_controller.js")
     end
     
     def create_views_folder
-      empty_directory "app/views/#{name}"
+      empty_directory "app/views/#{name.underscore}"
     end
     
   end

@@ -5,6 +5,8 @@ module Choco
   class ScaffoldGenerator < Thor::Group
     include Thor::Actions
     
+    attr_accessor :keys
+    
     def self.source_root
       File.dirname(__FILE__)
     end

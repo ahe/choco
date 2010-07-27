@@ -29,6 +29,7 @@ module Choco
     
     def create_lib_folder
       empty_directory "#{name}/lib"
+      template("templates/lib/application.js", "#{name}/lib/application.js")
     end
     
     def create_images_folder

@@ -1,13 +1,13 @@
 <h1>Add a new <%= @model %></h1>
 <form action="#/<%= @route_path %>" method="post">
-  <% @keys.each do |key| %>
-    <% if key != 'id' %>
-      <p>
-        <label><%= key.camelcase %></label><br/>
-        <input type="text" name="<%= @model %>[<%= key %>]"/>
-      </p>
-    <% end %>
-  <% end %>
+<% @keys.each do |key| -%>
+<% if key != 'id' -%>
+  <p>
+    <label><%= key.camelcase %></label><br/>
+    <input type="text" name="<%= @model %>[<%= key %>]"/>
+  </p>
+<% end -%>
+<% end -%>
   <p>
     <input type="submit" value="Add" />
   </p>
