@@ -25,6 +25,8 @@ A sample project based on Rails 3 is available here : http://github.com/ahe/choc
 An awesome screencast with an awesome belgian accent is available here : 
 http://www.2dconcept.com/images/choco.mov
 
+Follow us on Twitter : https://twitter.com/choco_js
+
 == Installation
 
 Choco is a Ruby gem, simply install it :
