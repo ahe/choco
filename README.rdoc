@@ -206,9 +206,9 @@ The Choco application will then be launched when all the responses have been rec
 To create, remove & update posts, you have to create your REST controller on the server side.
 Have a look at the sample demo for an example (http://github.com/ahe/choco_demo).
 
-You can also use fixtures instead. Fixtures are located in the /fixtures folder, they uses the jquery.mockjax plugin to mock Ajax requests and return the JSON you defined in your fixtures.
+You can also use fixtures instead. Fixtures are located in the /fixtures folder, they use the jquery.mockjax plugin to mock Ajax requests and return the JSON you defined in your fixtures.
 
-Use the choco generate fixture to easily create your fixtures (e.g : $ choco generate fixture post, will mock requests sent to the /posts URL).
+Use the choco generate fixture command to easily create your fixtures (e.g : $ choco generate fixture post, will mock requests sent to the /posts URL).
 
 = Generators
 
