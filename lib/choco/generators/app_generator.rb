@@ -62,6 +62,10 @@ module Choco
       template('templates/Rakefile', "#{name}/Rakefile")
     end
     
+    def create_rackup_file
+      template('templates/config.ru', "#{name}/config.ru")
+    end
+    
     def create_readme_file
       create_file "#{name}/README.rdoc"
     end

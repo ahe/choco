@@ -42,10 +42,18 @@ This will generate your project structure.
 You can then install the required JS dependencies (jQuery, Sammy, ...) by executing the following command at the root of your project :
 
   $ rake choco:js:install
+  
+Launch your local server :
+
+  $ choco server
+
 
 == Location
 
 A Choco app is composed of static files (js, css, images, ...), it must be directly accessible on your web server.
+
+A local Rack web server can be launched directly using the '$ choco server' command. You'll have to install WEBRick or Mongrel.
+
 If you use Rails, you can for example put your Choco app inside the public/javascripts folder.
 
 Once you've chosen the location where your application will reside, don't forget to configure the path to your view files.

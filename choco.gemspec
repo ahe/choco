@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Anthony Heukmes"]
-  s.date = %q{2010-07-28}
+  s.date = %q{2010-07-31}
   s.default_executable = %q{choco}
   s.description = %q{Choco brings the MVC to the client side! It allows you to easily develop maintainable Rich Internet Applications using Javascript.}
   s.email = %q{anthony.heukmes@skynet.be}
@@ -42,6 +42,7 @@ Gem::Specification.new do |s|
      "lib/choco/generators/templates/Rakefile",
      "lib/choco/generators/templates/application.css",
      "lib/choco/generators/templates/choco",
+     "lib/choco/generators/templates/config.ru",
      "lib/choco/generators/templates/controllers/application_controller.js",
      "lib/choco/generators/templates/controllers/base_controller.js",
      "lib/choco/generators/templates/controllers/rest_controller.js",
@@ -87,12 +88,14 @@ Gem::Specification.new do |s|
       s.add_runtime_dependency(%q<fssm>, [">= 0"])
       s.add_runtime_dependency(%q<thor>, [">= 0"])
       s.add_runtime_dependency(%q<activesupport>, [">= 0"])
+      s.add_runtime_dependency(%q<rack>, [">= 0"])      
       s.add_development_dependency(%q<rspec>, [">= 1.2.9"])
     else
       s.add_dependency(%q<jim>, [">= 0"])
       s.add_dependency(%q<fssm>, [">= 0"])
       s.add_dependency(%q<thor>, [">= 0"])
       s.add_dependency(%q<activesupport>, [">= 0"])
+      s.add_dependency(%q<rack>, [">= 0"])      
       s.add_dependency(%q<rspec>, [">= 1.2.9"])
     end
   else
@@ -100,6 +103,7 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<fssm>, [">= 0"])
     s.add_dependency(%q<thor>, [">= 0"])
     s.add_dependency(%q<activesupport>, [">= 0"])
+    s.add_dependency(%q<rack>, [">= 0"])
     s.add_dependency(%q<rspec>, [">= 1.2.9"])
   end
 end

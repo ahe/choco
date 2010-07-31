@@ -1,3 +1,7 @@
+== 0.1.3 [08-31-10]
+* Add $ choco server command to launch a local rack server
+* A config.ru file is created at the root of each new project
+
 == 0.1.2 [08-27-10]
 * Add fixtures generate (mock ajax requests)
 

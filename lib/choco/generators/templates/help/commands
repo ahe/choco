@@ -9,4 +9,8 @@ The choco script responds to the following commands and options :
 generate <generator_name> <resource_name> [options]
   Available generators are : controller, model, scaffold, fixture, layout, plugin
   Run '$ choco generate', for more information.
-
+  
+server [options]
+  -s, --server SERVER      serve using SERVER (webrick/mongrel)
+  -p, --port PORT          use PORT (default: 9292)
+  

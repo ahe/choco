@@ -64,14 +64,6 @@ describe "Generators" do
     
     describe "templates" do
       
-      describe "ApplicationController" do
-      
-        it "should set the views path to the project views folder" do
-          file = get_file_as_string(@project_path + '/app/controllers/application_controller.js')
-          file.include?("this.project_path = '/spec/tmp/test_project';").should be_true
-        end
-      end
-      
       describe "index.html" do
         
         before(:all) do

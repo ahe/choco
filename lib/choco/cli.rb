@@ -13,7 +13,8 @@ module Choco
       @args << '--help' if @args.empty?
 
       aliases = {
-        "g"  => "generate"
+        "g"  => "generate",
+        "s"  => "server"
       }
 
       command = @args.shift
@@ -28,6 +29,14 @@ module Choco
           else
             @output = template('generators')
           end
+        
+        when 'server'
+          port = 9292
+          port = @args[@args.index('-p') + 1] if @args.include?('-p')
+          port = @args[@args.index('--port') + 1] if @args.include?('--port')
+          puts "*** Choco server is now running on port #{port}"
+          puts "*** Launch http://localhost:#{port}/index.html to start your Choco application"
+          system "rackup #{@args.join(' ')}"
 
         when '--watch'
           require 'fssm'
