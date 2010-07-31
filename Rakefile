@@ -19,7 +19,8 @@ begin
     gem.add_dependency "jim"
     gem.add_dependency "fssm"
     gem.add_dependency "thor"
-    gem.add_dependency "activesupport"    
+    gem.add_dependency "activesupport"
+    gem.add_dependency "rack"    
     
     gem.add_development_dependency "rspec", ">= 1.2.9"
   end
