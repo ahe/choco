@@ -112,5 +112,12 @@ describe Choco::DependencyManager do
       end
     end
     
+    describe "when it's a model" do
+      it "should not change empty the application controller" do
+        Choco::DependencyManager.remove_dependency('app/models/article.js')
+        in_file('app/controllers/application_controller.js', 'var app = $.sammy(function() {').should == 1
+      end
+    end
+    
   end
 end

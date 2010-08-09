@@ -64,7 +64,11 @@ module Choco
       file = extract_filename(filename)
       application_controller = ""
       File.new('app/controllers/application_controller.js', "r").each do |line|
-        application_controller << line if !line.include?(file) && type != 'Model'
+        if type == 'Model'
+          application_controller << line
+        elsif !line.include?(file)
+          application_controller << line
+        end
       end
       
       File.open('app/controllers/application_controller.js', "wb") { |io| io.print application_controller }
