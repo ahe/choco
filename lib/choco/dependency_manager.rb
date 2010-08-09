@@ -9,19 +9,7 @@ module Choco
     
     def self.add_dependency(filename)
       filename = remove_extension(filename)
-      
-      if filename.include?('controllers/')
-        type = 'Controller'
-      elsif filename.include?('helpers/')
-        type = 'Helper'
-      elsif filename.include?('models/')
-        type = 'Model'
-      elsif filename.include?('fixtures/')
-        type = 'Fixture'        
-      else
-        type = 'Libs'
-      end
-      
+      type     = get_file_type(filename)
       
       already_present = false
       File.new('Jimfile', "r").each do |line|
@@ -64,6 +52,7 @@ module Choco
     
     def self.remove_dependency(filename)
       filename = remove_extension(filename)
+      type     = get_file_type(filename)
       
       jimfile = ""
       File.new('Jimfile', "r").each do |line|
@@ -75,7 +64,7 @@ module Choco
       file = extract_filename(filename)
       application_controller = ""
       File.new('app/controllers/application_controller.js', "r").each do |line|
-        application_controller << line unless line.include?(file)
+        application_controller << line if !line.include?(file) && type != 'Model'
       end
       
       File.open('app/controllers/application_controller.js', "wb") { |io| io.print application_controller }
@@ -89,6 +78,20 @@ module Choco
     
     def self.extract_filename(filename)
       filename.to_s.split('/').last.camelcase
+    end
+    
+    def self.get_file_type(filename)
+      if filename.include?('controllers/')
+        'Controller'
+      elsif filename.include?('helpers/')
+        'Helper'
+      elsif filename.include?('models/')
+        'Model'
+      elsif filename.include?('fixtures/')
+        'Fixture'        
+      else
+        'Libs'
+      end
     end
   end
 end
