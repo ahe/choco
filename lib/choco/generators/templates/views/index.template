@@ -6,10 +6,12 @@
 
 <table>
   <thead>
-  <% @keys.each do |key| -%>
-    <th><%= key.camelcase %></th>
-  <% end -%>
-    <th>Actions</th>
+    <tr>
+    <% @keys.each do |key| -%>
+      <th><%= key.camelcase %></th>
+    <% end -%>
+      <th>Actions</th>
+    </tr>
   </thead>
   <tbody>
     <%% $.each(<%= @model.pluralize %>, function(i, <%= @model %>) { %>
